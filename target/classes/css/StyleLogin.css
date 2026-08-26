@@ -1,0 +1,113 @@
+.main-container {
+    /* Contenedor principal */
+    /* Ventana completa */
+    -fx-background-color: #f5f3ef;
+    -fx-pref-width: 850;
+    -fx-pref-height: 480;
+}
+
+.left-panel {
+    /* Panel izquierdo */
+    /* Fondo rojo con degradado */
+    -fx-background-color: linear-gradient(to bottom, #e1251b, #b81d15);
+    -fx-background-radius: 20 0 0 20;
+}
+
+.brand-title {
+    /* Título de la marca */
+    /* Texto grande en blanco */
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.logo-container {
+    /* Contenedor del logo */
+    /* Recuadro blanco de 180x180 */
+    -fx-background-color: white;
+    -fx-background-radius: 18;
+    -fx-min-width: 180;
+    -fx-min-height: 180;
+    -fx-max-width: 180;
+    -fx-max-height: 180;
+}
+
+.brand-subtitle {
+    /* Subtítulo de la marca */
+    /* Texto blanco mediano */
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.right-panel {
+    /* Panel derecho */
+    /* Fondo blanco para formulario */
+    -fx-background-color: white;
+    -fx-background-radius: 0 20 20 0;
+}
+
+.form-title {
+    /* Título del formulario */
+    /* Texto negro muy grande */
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+}
+
+.input-label {
+    /* Etiquetas de texto */
+    /* Texto gris pequeño */
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #666666;
+}
+
+.custom-field {
+    /* Cajas de texto */
+    /* Bordes gris claro */
+    -fx-background-color: #faf9f6;
+    -fx-border-color: #e6e1da;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 10;
+}
+
+.custom-field:focused {
+    /* Caja seleccionada */
+    /* El borde cambia a rojo */
+    -fx-border-color: #e1251b;
+}
+
+.primary-button {
+    /* Botón principal */
+    /* Fondo rojo con manita */
+    -fx-background-color: #e1251b;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-padding: 12;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    /* Botón encima */
+    /* Rojo oscuro al pasar mouse */
+    -fx-background-color: #b81d15;
+}
+
+   /* --- ESTILOS DE ERROR DEL LOGIN --- */
+.lbl-error {
+    -fx-text-fill: #e74c3c;
+    -fx-font-size: 11px;
+}
+
+.custom-field-error {
+    -fx-border-color: #e74c3c;
+    -fx-border-width: 1.5px;
+}

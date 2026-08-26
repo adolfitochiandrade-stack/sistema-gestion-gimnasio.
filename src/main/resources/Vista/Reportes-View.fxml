@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox stylesheets="@../css/StyleReportes.css" styleClass="reportes-main-container" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.ReportesController">
+    <children>
+
+        <HBox styleClass="top-bar" alignment="CENTER_LEFT" spacing="12">
+            <children>
+                <Label text="GymAdmin" styleClass="top-logo"/>
+                <Label text="  |  Reportes" styleClass="top-breadcrumb"/>
+                <Region HBox.hgrow="ALWAYS" />
+                <Button fx:id="btnVolver" text="← Volver" onAction="#volverAlMenu" styleClass="btn-volver"/>
+            </children>
+            <padding>
+                <Insets top="15" right="25" bottom="15" left="25"/>
+            </padding>
+        </HBox>
+
+        <VBox alignment="CENTER" spacing="24" VBox.vgrow="ALWAYS">
+            <children>
+
+                <VBox alignment="CENTER" spacing="6">
+                    <children>
+                        <Label text="Reportes" styleClass="welcome-title"/>
+                        <Label text="Da clic en un módulo para filtrar por fecha, o exporta directamente" styleClass="welcome-subtitle"/>
+                    </children>
+                </VBox>
+
+                <HBox alignment="TOP_CENTER" spacing="22">
+                    <children>
+
+                        <VBox alignment="CENTER" spacing="10" styleClass="report-card, report-card-clientes" onMouseClicked="#abrirFiltroClientes">
+                            <children>
+                                <Label text="👤" styleClass="report-icon, report-icon-clientes"/>
+                                <Label text="Clientes" styleClass="report-card-title"/>
+                                <Label fx:id="lblEstadoClientes" text="Mostrando: todos los registros" styleClass="report-card-estado" wrapText="true"/>
+                                <HBox spacing="8" alignment="CENTER" onMouseClicked="#detenerPropagacion">
+                                    <children>
+                                        <Button text="⭳ Excel" onAction="#exportarClientesExcel" styleClass="btn-export-small, btn-export-excel"/>
+                                        <Button text="⭳ PDF" onAction="#exportarClientesPdf" styleClass="btn-export-small, btn-export-pdf"/>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+
+                        <VBox alignment="CENTER" spacing="10" styleClass="report-card, report-card-productos" onMouseClicked="#abrirFiltroProductos">
+                            <children>
+                                <Label text="📦" styleClass="report-icon, report-icon-productos"/>
+                                <Label text="Productos" styleClass="report-card-title"/>
+                                <Label fx:id="lblEstadoProductos" text="Mostrando: todos los registros" styleClass="report-card-estado" wrapText="true"/>
+                                <HBox spacing="8" alignment="CENTER" onMouseClicked="#detenerPropagacion">
+                                    <children>
+                                        <Button text="⭳ Excel" onAction="#exportarProductosExcel" styleClass="btn-export-small, btn-export-excel"/>
+                                        <Button text="⭳ PDF" onAction="#exportarProductosPdf" styleClass="btn-export-small, btn-export-pdf"/>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+
+                        <VBox alignment="CENTER" spacing="10" styleClass="report-card, report-card-pagos" onMouseClicked="#abrirFiltroPagos">
+                            <children>
+                                <Label text="💲" styleClass="report-icon, report-icon-pagos"/>
+                                <Label text="Pagos" styleClass="report-card-title"/>
+                                <Label fx:id="lblEstadoPagos" text="Mostrando: todos los registros" styleClass="report-card-estado" wrapText="true"/>
+                                <HBox spacing="8" alignment="CENTER" onMouseClicked="#detenerPropagacion">
+                                    <children>
+                                        <Button text="⭳ Excel" onAction="#exportarPagosExcel" styleClass="btn-export-small, btn-export-excel"/>
+                                        <Button text="⭳ PDF" onAction="#exportarPagosPdf" styleClass="btn-export-small, btn-export-pdf"/>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+
+                        <VBox alignment="CENTER" spacing="10" styleClass="report-card, report-card-todo" onMouseClicked="#abrirFiltroTodo">
+                            <children>
+                                <Label text="🗂" styleClass="report-icon, report-icon-todo"/>
+                                <Label text="Todo" styleClass="report-card-title"/>
+                                <Label fx:id="lblEstadoTodo" text="Reporte completo (todos)" styleClass="report-card-estado" wrapText="true"/>
+                                <HBox spacing="8" alignment="CENTER" onMouseClicked="#detenerPropagacion">
+                                    <children>
+                                        <Button text="⭳ Excel" onAction="#exportarTodoExcel" styleClass="btn-export-small, btn-export-excel"/>
+                                        <Button text="⭳ PDF" onAction="#exportarTodoPdf" styleClass="btn-export-small, btn-export-pdf"/>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+
+                    </children>
+                    <padding>
+                        <Insets top="10" right="15" bottom="15" left="15"/>
+                    </padding>
+                </HBox>
+
+            </children>
+        </VBox>
+    </children>
+</VBox>

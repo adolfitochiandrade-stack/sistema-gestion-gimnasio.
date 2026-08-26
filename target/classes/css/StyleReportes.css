@@ -1,0 +1,259 @@
+.reportes-main-container {
+    -fx-background-color: #f7f6f2;
+    -fx-pref-width: 960;
+    -fx-pref-height: 560;
+}
+
+/* NAVBAR SUPERIOR (mismo estilo que el menú principal) */
+.top-bar {
+    -fx-background-color: white;
+    -fx-border-color: #eae7e0;
+    -fx-border-width: 0 0 1 0;
+}
+.top-logo {
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e1251b;
+}
+.top-breadcrumb {
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-font-size: 14px;
+    -fx-text-fill: #8a857c;
+}
+
+/* Botón Volver (arriba a la derecha) */
+.btn-volver {
+    -fx-background-color: transparent;
+    -fx-border-color: #722ED1;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-text-fill: #722ED1;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 6px 14px;
+}
+.btn-volver:hover {
+    -fx-background-color: #F5EEFB;
+}
+
+/* TEXTOS DE ENTRADA */
+.welcome-title {
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+}
+.welcome-subtitle {
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-font-size: 15px;
+    -fx-text-fill: #7c776e;
+}
+
+/* TARJETAS DE MÓDULO (clic = abre el filtro de fechas; abajo tienen estado + exportar) */
+.report-card {
+    -fx-background-color: white;
+    -fx-pref-width: 210;
+    -fx-min-height: 190;
+    -fx-background-radius: 18;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 18;
+    -fx-cursor: hand;
+    -fx-padding: 16 10 16 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.06), 15, 0, 0, 6);
+}
+.report-card:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.12), 18, 0, 0, 8);
+}
+
+.report-icon {
+    -fx-font-size: 32px;
+}
+
+.report-card-title {
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+/* Clientes (Azul) */
+.report-card-clientes { -fx-border-color: #1890ff; }
+.report-icon-clientes { -fx-text-fill: #1890ff; }
+
+/* Productos (Amarillo) */
+.report-card-productos { -fx-border-color: #faad14; }
+.report-icon-productos { -fx-text-fill: #faad14; }
+
+/* Pagos (Verde) */
+.report-card-pagos { -fx-border-color: #52c41a; }
+.report-icon-pagos { -fx-text-fill: #52c41a; }
+
+/* Todo (Morado, para diferenciarlo del resto) */
+.report-card-todo { -fx-border-color: #722ED1; }
+.report-icon-todo { -fx-text-fill: #722ED1; }
+
+/* Texto de estado del filtro, debajo del título de cada cuadrito */
+.report-card-estado {
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-font-size: 11px;
+    -fx-text-fill: #8a857c;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-pref-width: 180;
+}
+
+/* Botones pequeños de exportar (Excel / PDF) debajo de cada cuadrito */
+.btn-export-small {
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 14;
+    -fx-padding: 5 12;
+    -fx-cursor: hand;
+}
+.btn-export-excel {
+    -fx-background-color: #111111;
+    -fx-text-fill: white;
+}
+.btn-export-excel:hover {
+    -fx-background-color: #333333;
+}
+.btn-export-pdf {
+    -fx-background-color: white;
+    -fx-text-fill: #e1251b;
+    -fx-border-color: #e1251b;
+    -fx-border-width: 1.2;
+    -fx-background-radius: 14;
+    -fx-border-radius: 14;
+}
+.btn-export-pdf:hover {
+    -fx-background-color: #fff1f0;
+}
+
+/* ===================== MODAL FLOTANTE DE FILTRO DE FECHAS ===================== */
+/* Mismo color/diseño que el resto de la app (fondo blanco, acentos morados) */
+.filtro-modal-container {
+    -fx-background-color: #f7f6f2;
+    -fx-pref-width: 420;
+    -fx-min-height: 340;
+}
+.filtro-modal-todo {
+    -fx-pref-width: 460;
+    -fx-min-height: 620;
+}
+.filtro-modal-title {
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+}
+.filtro-modal-subtitle {
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-font-size: 12px;
+    -fx-text-fill: #7c776e;
+}
+.filtro-field-label {
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #444444;
+}
+.filtro-date-picker {
+    -fx-background-radius: 8;
+}
+
+/* --- ESTILO DE ERRORES (mismo criterio que Clientes/Pagos/Productos) --- */
+.lbl-error {
+    -fx-text-fill: #e74c3c;
+    -fx-font-size: 11px;
+}
+.input-field-active-error {
+    -fx-border-color: #e74c3c;
+    -fx-border-width: 1.5px;
+}
+
+/* Secciones del modal "Todo" (Clientes / Pagos / Productos), con el color de cada módulo */
+.filtro-todo-seccion {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-width: 1.2;
+    -fx-padding: 10 12;
+}
+.filtro-todo-clientes { -fx-border-color: #1890ff; }
+.filtro-todo-pagos { -fx-border-color: #52c41a; }
+.filtro-todo-productos { -fx-border-color: #faad14; }
+.filtro-todo-titulo-seccion {
+    -fx-font-family: "Segoe UI", "Arial";
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+/* Botones del pie del modal de filtro */
+.btn-filtro-guardar {
+    -fx-background-color: #722ED1;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-padding: 7 18;
+    -fx-cursor: hand;
+}
+.btn-filtro-guardar:hover {
+    -fx-background-color: #5b23a8;
+}
+.btn-filtro-cancelar {
+    -fx-background-color: transparent;
+    -fx-text-fill: #7c776e;
+    -fx-padding: 7 14;
+    -fx-cursor: hand;
+}
+.btn-filtro-cancelar:hover {
+    -fx-text-fill: #333333;
+}
+.btn-filtro-limpiar {
+    -fx-background-color: transparent;
+    -fx-border-color: #cfcac0;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-text-fill: #555555;
+    -fx-padding: 6 14;
+    -fx-cursor: hand;
+}
+.btn-filtro-limpiar:hover {
+    -fx-background-color: #efece5;
+}
+
+/* Botón grande: exportar todo a Excel */
+.report-export-todo-button {
+    -fx-background-color: #111111;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 20;
+    -fx-padding: 12 30;
+    -fx-cursor: hand;
+    -fx-min-width: 300;
+}
+.report-export-todo-button:hover {
+    -fx-background-color: #333333;
+}
+
+/* Botón grande: exportar todo a PDF (debajo del negro) */
+.report-export-pdf-button {
+    -fx-background-color: white;
+    -fx-text-fill: #e1251b;
+    -fx-border-color: #e1251b;
+    -fx-border-width: 1.5;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-padding: 11 30;
+    -fx-cursor: hand;
+    -fx-min-width: 300;
+}
+.report-export-pdf-button:hover {
+    -fx-background-color: #fff1f0;
+}
